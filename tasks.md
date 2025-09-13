@@ -45,3 +45,37 @@
     "intro-call": { title: "30-min Intro Call", durationMins: 30, description: "Let’s connect." },
     "coffee-chat": { title: "15-min Coffee Chat", durationMins: 15, description: "Quick virtual coffee." }
   }
+## 4) Polish (UI & A11y)
+
+4.1 Responsive layout
+- Ensure booking page stacks vertically on mobile (<md) and switches to two-column on ≥md.
+- Slot buttons have min-height 44px and comfortable padding.
+
+4.2 Accessibility
+- Visible focus styles on all interactive elements.
+- ConfirmDialog traps focus, closes on Esc, labeled inputs with aria attributes.
+- Decorative icons marked `aria-hidden="true"`.
+
+4.3 Loading & Empty states
+- Skeleton placeholders (animate-pulse) for calendar and slots while loading.
+- Friendly empty state message if no slots available.
+
+4.4 Error states
+- Inline form errors (zod) for name/email.
+- `/book/confirm` shows friendly error if params missing.
+- Sonner toast for unexpected errors.
+
+4.5 Visual consistency
+- Consistent spacing (`space-y-4` etc.).
+- Descriptions in `text-muted-foreground`.
+- Use shadcn `Card`, `Separator`, `Badge` where helpful.
+
+4.6 Timezone clarity
+- BookingHeader shows “Times shown in {timezone}”.
+- SuccessPanel formats start/end with `toLocaleString()` and includes timezone.
+
+4.7 Keyboard navigation
+- Verify full booking flow is keyboard-accessible (calendar → slots → dialog → submit).
+- Fix any missing `tabIndex`/ARIA as needed.
+
+**Acceptance:** Manual QA on desktop + mobile viewport. End-to-end booking flow works with keyboard. Responsive design, a11y, and polish issues addressed.
