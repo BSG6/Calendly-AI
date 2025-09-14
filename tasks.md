@@ -124,3 +124,40 @@
 ✅ Fully accessible and keyboard navigable
 
 **Next Steps:** Manual testing and deployment! 🚀
+
+## 5) Homepage + Branding
+
+5.1 Homepage Layout
+- [ ] Create `src/app/page.tsx`
+- [ ] Hero section: round avatar (illustration), name, tagline “Grab a slot, let’s make some magic 🌸”
+- [ ] CTA: “Pick a vibe, not just a time ✨”
+- [ ] Event cards linking to booking flows
+**Acceptance:** Homepage loads with hero, CTA, and event cards
+
+5.2 Event Cards Styling
+- [ ] Create custom 8-point star + blob shapes for event cards
+- [ ] “Let’s Bloom” (30 min) → star shape; “Coffee Chat” (15 min) → blob
+- [ ] Hover: 50% fade + complementary glow
+- [ ] Duration badge styled in brand colors
+**Acceptance:** Cards animate correctly and look unique
+
+5.3 Quirky Event Text
+- [ ] Rename “Intro Call” → “Let’s Bloom”
+- [ ] Add quirky descriptions on homepage + booking pages
+**Acceptance:** Copy is playful and consistent across pages
+
+5.4 Footer + Socials
+- [ ] Footer: “Inspired by Calendly, built by me 💜 digitalflower”
+- [ ] Add GitHub, LinkedIn, Bluesky icons with hover states
+- [ ] Ensure accessible labels + external links open correctly
+**Acceptance:** Footer visible; socials clickable + accessible
+
+5.5 Branding Update
+- [ ] Apply palette to Tailwind config:
+  - primary: #4E0250
+  - accent-purple: #801A86
+  - neutral: #645986
+  - accent-green: #8FE388
+  - deep-green: #58BC82
+- [ ] Update buttons, badges, headings, hover states across app
+**Acceptance:** Consistent brand feel across homepage + booking flow

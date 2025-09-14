@@ -68,3 +68,58 @@ Back-and-forth scheduling wastes time. We need a tiny, fast booking flow: share 
 - **Production Build**: `npm run build` → optimized for deployment
 - **No Environment Variables Required**: Fully self-contained MVP
 - **No Database Dependencies**: Stateless booking flow
+
+# PRD — Calendly Lite (Phase 2: Homepage + Branding)
+
+## Problem
+Back-and-forth scheduling wastes time. Calendly set the blueprint for solving this, but we want to add a playful, vibrant spin that feels personal and true to the digitalflower vibe.
+
+## Users
+- Host (single owner for MVP)
+- Guest (anyone with the public link)
+
+## In-Scope (Phase 2)
+- **Homepage at `/`**:
+  - Inspired by Calendly’s landing experience
+  - Host identity section: round avatar (playful illustration), name, tagline
+  - CTA: *“Pick a vibe, not just a time ✨”*
+  - Event cards:
+    - **Let’s Bloom (30 min)** — *“A half hour to plant ideas, swap stories, and see what grows 🌱.”*
+    - **Coffee Chat (15 min)** — *“Short, sweet, and caffeinated ☕ — a quick burst of connection.”*
+  - Each card uses a unique playful shape (e.g., 8-point star, blob) and links to `/b/[slug]`
+  - Hover effect: fade 50% brightness + glow in complementary palette color
+
+- **Branding**:
+  - Bright + vibrant palette applied consistently across app:
+    - Primary Purple (deep): `#4E0250`
+    - Accent Purple (bright): `#801A86`
+    - Muted Purple/Gray: `#645986`
+    - Accent Green (fresh): `#8FE388`
+    - Deep Green (contrast): `#58BC82`
+  - Buttons, badges, and highlights updated to reflect palette
+  - Tone: playful, approachable, quirky (digitalflower style)
+
+- **Footer**:
+  - Text: *“Inspired by Calendly, built by me 💜 digitalflower”*
+  - Social icons: GitHub, LinkedIn, Bluesky
+  - Hover states in palette colors; accessible labels
+
+## Out of Scope (Phase 2)
+- Multi-tenant hosting (still single owner)
+- Real calendar integrations beyond .ics
+- Custom theme picker (palette fixed in Tailwind config)
+
+## Technical Implementation Details
+- **Framework**: Next.js (App Router) + TypeScript
+- **Styling**: Tailwind CSS + shadcn/ui (extended with custom palette)
+- **Shapes**: Tailwind utilities + CSS clip-path (for star/blob)
+- **Hover Effects**: Tailwind opacity + drop-shadow/glow
+- **Socials**: Radix icons or lucide-react
+
+## Success Criteria
+- ✅ Homepage at `/` loads with avatar, name, tagline, and CTA
+- ✅ Event cards display in custom shapes, animate on hover
+- ✅ Clicking event card routes to correct booking flow
+- ✅ Footer visible with correct text + working social links
+- ✅ Palette applied consistently to homepage and booking flow
+- ✅ Overall look/feel references Calendly but with a playful, vibrant twist
