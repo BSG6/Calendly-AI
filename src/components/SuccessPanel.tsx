@@ -20,8 +20,18 @@ export function SuccessPanel({ title, start, end, duration }: SuccessPanelProps)
       hour: "numeric",
       minute: "2-digit",
       hour12: true,
+      timeZoneName: "short",
     })
   }
+
+  // Build ICS download URL
+  const icsUrl = `/api/ics?${new URLSearchParams({
+    title,
+    start,
+    end,
+    description: `${title} - Duration: ${duration} minutes`,
+    location: "Online",
+  }).toString()}`
 
   const copyDetails = async () => {
     const details = `${title}
@@ -53,7 +63,7 @@ End: ${formatDateTime(end)}`
 
       <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
         <Button asChild>
-          <a href="#" className="inline-flex items-center">
+          <a href={icsUrl} className="inline-flex items-center">
             Add to Calendar (.ics)
           </a>
         </Button>
