@@ -81,12 +81,12 @@ Back-and-forth scheduling wastes time. Calendly set the blueprint for solving th
 ## In-Scope (Phase 2)
 - **Homepage at `/`**:
   - Inspired by Calendly’s landing experience
-  - Host identity section: round avatar (playful illustration), name, tagline
+  - Host identity section: round avatar (`public/avatar.png`), name "Brie (Brittney Spann)", tagline "Grab a slot, let's make some magic"
   - CTA: *“Pick a vibe, not just a time ✨”*
   - Event cards:
     - **Let’s Bloom (30 min)** — *“A half hour to plant ideas, swap stories, and see what grows 🌱.”*
     - **Coffee Chat (15 min)** — *“Short, sweet, and caffeinated ☕ — a quick burst of connection.”*
-  - Each card uses a unique playful shape (e.g., 8-point star, blob) and links to `/b/[slug]`
+  - Each card uses a **thought-bubble shape** and links to `/b/[slug]`
   - Hover effect: fade 50% brightness + glow in complementary palette color
 
 - **Branding**:
@@ -101,7 +101,7 @@ Back-and-forth scheduling wastes time. Calendly set the blueprint for solving th
 
 - **Footer**:
   - Text: *“Inspired by Calendly, built by me 💜 digitalflower”*
-  - Social icons: GitHub, LinkedIn, Bluesky
+  - Social icons: LinkedIn, Portfolio, TikTok, Bluesky, Email, GitHub
   - Hover states in palette colors; accessible labels
 
 ## Out of Scope (Phase 2)
@@ -112,13 +112,13 @@ Back-and-forth scheduling wastes time. Calendly set the blueprint for solving th
 ## Technical Implementation Details
 - **Framework**: Next.js (App Router) + TypeScript
 - **Styling**: Tailwind CSS + shadcn/ui (extended with custom palette)
-- **Shapes**: Tailwind utilities + CSS clip-path (for star/blob)
+- **Shapes**: Tailwind utilities + CSS clip-path (for thought-bubble)
 - **Hover Effects**: Tailwind opacity + drop-shadow/glow
 - **Socials**: Radix icons or lucide-react
 
 ## Success Criteria
 - ✅ Homepage at `/` loads with avatar, name, tagline, and CTA
-- ✅ Event cards display in custom shapes, animate on hover
+- ✅ Event cards display in thought-bubble shapes, animate on hover
 - ✅ Clicking event card routes to correct booking flow
 - ✅ Footer visible with correct text + working social links
 - ✅ Palette applied consistently to homepage and booking flow

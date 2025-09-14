@@ -129,14 +129,14 @@
 
 5.1 Homepage Layout
 - [ ] Create `src/app/page.tsx`
-- [ ] Hero section: round avatar (illustration), name, tagline “Grab a slot, let’s make some magic 🌸”
+- [ ] Hero section: round avatar (`public/avatar.png`), name "Brie (Brittney Spann)", tagline "Grab a slot, let's make some magic"
 - [ ] CTA: “Pick a vibe, not just a time ✨”
 - [ ] Event cards linking to booking flows
 **Acceptance:** Homepage loads with hero, CTA, and event cards
 
 5.2 Event Cards Styling
-- [ ] Create custom 8-point star + blob shapes for event cards
-- [ ] “Let’s Bloom” (30 min) → star shape; “Coffee Chat” (15 min) → blob
+- [ ] Create custom thought-bubble shapes for event cards
+- [ ] "Let's Bloom" (30 min) → thought-bubble shape; "Coffee Chat" (15 min) → thought-bubble shape
 - [ ] Hover: 50% fade + complementary glow
 - [ ] Duration badge styled in brand colors
 **Acceptance:** Cards animate correctly and look unique
@@ -148,7 +148,7 @@
 
 5.4 Footer + Socials
 - [ ] Footer: “Inspired by Calendly, built by me 💜 digitalflower”
-- [ ] Add GitHub, LinkedIn, Bluesky icons with hover states
+- [ ] Add LinkedIn, Portfolio, TikTok, Bluesky, Email, GitHub icons with hover states
 - [ ] Ensure accessible labels + external links open correctly
 **Acceptance:** Footer visible; socials clickable + accessible
 
