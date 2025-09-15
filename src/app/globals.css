@@ -215,6 +215,105 @@
   .hover\:text-brand-primary:hover { color: var(--brand-primary) !important; }
   .hover\:text-brand-deep-green:hover { color: var(--brand-deep-green) !important; }
   
+  /* Enhanced Calendar Styling for shadcn Calendar */
+  [data-slot="calendar"] {
+    --cell-size: 2.5rem;
+    width: 100%;
+  }
+  
+  /* Calendar container */
+  .group\/calendar {
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  
+  /* Month navigation */
+  .group\/calendar .flex.items-center.justify-between {
+    margin-bottom: 1rem;
+  }
+  
+  /* Calendar table */
+  .group\/calendar table {
+    width: 100%;
+  }
+  
+  /* Weekday headers */
+  .group\/calendar .text-muted-foreground.flex-1 {
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: var(--brand-neutral);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0;
+  }
+  
+  /* Day buttons */
+  .group\/calendar button[data-day] {
+    width: var(--cell-size) !important;
+    height: var(--cell-size) !important;
+    border-radius: 8px !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+    border: 1px solid transparent !important;
+  }
+  
+  /* Default day button state */
+  .group\/calendar button[data-day]:not([data-selected-single="true"]):not([disabled]) {
+    background: transparent !important;
+    color: hsl(var(--foreground)) !important;
+  }
+  
+  /* Hover state */
+  .group\/calendar button[data-day]:not([data-selected-single="true"]):not([disabled]):hover {
+    background-color: color-mix(in srgb, var(--brand-primary) 10%, transparent) !important;
+    color: var(--brand-primary) !important;
+    border-color: color-mix(in srgb, var(--brand-primary) 20%, transparent) !important;
+  }
+  
+  /* Selected state */
+  .group\/calendar button[data-selected-single="true"] {
+    background-color: var(--brand-primary) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border-color: var(--brand-primary) !important;
+  }
+  
+  /* Today indicator */
+  .group\/calendar button[data-day].bg-accent {
+    background-color: color-mix(in srgb, var(--brand-accent-green) 15%, transparent) !important;
+    color: var(--brand-deep-green) !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Disabled dates */
+  .group\/calendar button[disabled] {
+    color: #d1d5db !important;
+    cursor: not-allowed !important;
+    background: transparent !important;
+  }
+  
+  .group\/calendar button[disabled]:hover {
+    background: transparent !important;
+    border-color: transparent !important;
+  }
+  
+  /* Outside month dates */
+  .group\/calendar button.text-muted-foreground {
+    color: #d1d5db !important;
+  }
+  
+  /* Navigation buttons */
+  .group\/calendar .h-\[--cell-size\].w-\[--cell-size\] {
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  .group\/calendar .h-\[--cell-size\].w-\[--cell-size\]:hover {
+    background-color: color-mix(in srgb, var(--brand-primary) 10%, transparent) !important;
+    color: var(--brand-primary) !important;
+  }
+  
   /* Background gradient utilities */
   .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)) !important; }
   .from-brand-neutral\/10 { --tw-gradient-from: color-mix(in srgb, var(--brand-neutral) 10%, transparent) !important; --tw-gradient-to: transparent !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }

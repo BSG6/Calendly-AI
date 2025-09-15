@@ -38,9 +38,14 @@ export function SlotList({ slots, onSelect, loading = false }: SlotListProps) {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
+    <div className="space-y-2">
       {slots.map((slot) => (
-        <Button key={slot} variant="outline" size="sm" onClick={() => onSelect(slot)} className="h-10">
+        <Button 
+          key={slot} 
+          variant="outline" 
+          onClick={() => onSelect(slot)} 
+          className="w-full h-12 justify-start text-left font-medium hover:bg-brand-primary hover:text-white hover:border-brand-primary transition-all duration-200"
+        >
           {formatTimeSlot(slot)}
         </Button>
       ))}

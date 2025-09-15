@@ -129,18 +129,22 @@
 
 5.1 Homepage Layout ✅
 - [x] Create `src/app/page.tsx`
-- [x] Hero section: round avatar (`public/avatar.png`), name "Brie (Brittney Spann)", tagline "Grab a slot, let's make some magic"
+- [x] Hero section: round avatar (`public/avatar.png`), name "Brie", tagline "Grab a slot, let's make some magic"
 - [x] CTA: "Pick a vibe, not just a time ✨"
 - [x] Event cards linking to booking flows
+- [x] Enlarged homepage elements for better visual impact
+- [x] Applied elevated card design system with brand gradient background
 **Acceptance:** ✅ Homepage loads with hero, CTA, and event cards
 
 5.2 Event Cards Styling ✅
 - [x] Create custom thought-bubble shapes for event cards (organic border-radius)
-- [x] "Let's Bloom" (30 min) → thought-bubble shape; "Coffee Chat" (15 min) → thought-bubble shape
+- [x] "Let's Bloom" (30 min) → purple thought-bubble shape; "Coffee Chat" (15 min) → green thought-bubble shape
+- [x] Added colored dots to thought-bubble shapes using CSS pseudo-elements
 - [x] Hover: Enhanced shadows + micro-scale animation + brand color transitions
 - [x] Duration badge styled in brand colors
 - [x] Elevated card design system: brand background + white content cards
 - [x] Consistent styling pattern across all pages
+- [x] Deeper background colors for better visual distinction
 **Acceptance:** ✅ Cards animate correctly, look unique, and follow elevated design system
 
 5.3 Quirky Event Text ✅
@@ -155,12 +159,30 @@
 **Acceptance:** ✅ Footer visible; socials clickable + accessible
 
 5.5 Branding Update ✅
-- [x] Apply palette to Tailwind config:
+- [x] Apply palette to Tailwind config via CSS variables:
   - primary: #4E0250
   - accent-purple: #801A86
   - neutral: #645986
   - accent-green: #8FE388
   - deep-green: #58BC82
 - [x] Update buttons, badges, headings, hover states across app
-**Acceptance:** ✅ Consistent brand feel across homepage + booking flow
+- [x] Custom utility classes for brand colors in globals.css
+5.6 Professional Booking Page Layout ✅
+- [x] Restructure booking pages with Calendly-inspired layout
+- [x] Left column: Host avatar, name, tagline, event details, and "What to expect" section
+- [x] Right sidebar: Unified card with calendar and time slots
+- [x] Sticky sidebar positioning for better UX
+- [x] "Back to vibes" navigation button with quirky copy
+- [x] Host avatar (80x80px) and tagline displayed on booking pages
+**Acceptance:** ✅ Booking pages match professional Calendly layout with brand personality
+
+5.7 Enhanced Calendar & Time Slots ✅
+- [x] Custom CSS styling for shadcn Calendar component
+- [x] Brand color integration: purple hover/selected states, green today indicator
+- [x] Proper cell sizing (40px) and rounded corners for modern look
+- [x] Vertical time slot list replacing cramped grid layout
+- [x] Full-width time slot buttons with brand hover effects
+- [x] Smooth transitions and professional spacing throughout
+- [x] Unified card design for calendar and time slots sections
+**Acceptance:** ✅ Calendar and time slots look professional and match Calendly's clean design
 

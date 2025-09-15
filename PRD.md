@@ -80,14 +80,14 @@ Back-and-forth scheduling wastes time. Calendly set the blueprint for solving th
 
 ## In-Scope (Phase 2)
 - **Homepage at `/`**:
-  - Inspired by Calendly’s landing experience
-  - Host identity section: round avatar (`public/avatar.png`), name "Brie (Brittney Spann)", tagline "Grab a slot, let's make some magic"
-  - CTA: *“Pick a vibe, not just a time ✨”*
+  - Inspired by Calendly's landing experience
+  - Host identity section: round avatar (`public/avatar.png`), name "Brie", tagline "Grab a slot, let's make some magic"
+  - CTA: *"Pick a vibe, not just a time ✨"*
   - Event cards:
-    - **Let’s Bloom (30 min)** — *“A half hour to plant ideas, swap stories, and see what grows 🌱.”*
-    - **Coffee Chat (15 min)** — *“Short, sweet, and caffeinated ☕ — a quick burst of connection.”*
-  - Each card uses a **thought-bubble shape** and links to `/b/[slug]`
-  - Hover effect: fade 50% brightness + glow in complementary palette color
+    - **Let's Bloom (30 min)** — *"A half hour to plant ideas, swap stories, and see what grows 🌱."*
+    - **Coffee Chat (15 min)** — *"Short, sweet, and caffeinated ☕ — a quick burst of connection."*
+  - Each card uses **organic thought-bubble shapes** with colored dots and links to `/b/[slug]`
+  - Hover effect: Enhanced shadows + micro-scale animation + brand color transitions
 
 - **Branding & Visual Design**:
   - Bright + vibrant palette applied consistently across app:
@@ -100,7 +100,14 @@ Back-and-forth scheduling wastes time. Calendly set the blueprint for solving th
     - Main sections: Brand gradient background (`#645986` + `#801A86` at low opacity)
     - Inner sections: White elevated cards (`bg-white`, `rounded-2xl`, `shadow-md`)
     - Hover effects: Enhanced shadows (`shadow-xl`) + micro-interactions (`scale-[1.02]`)
-    - Thought-bubble shapes: Organic border-radius for event cards
+    - Thought-bubble shapes: Organic border-radius with colored dots for event cards
+  - **Professional Booking Pages**:
+    - Calendly-inspired layout: Left column (host info + event details), right sidebar (calendar + time slots)
+    - Sticky sidebar with unified card design for calendar and time slots
+    - Clean calendar styling with brand colors and proper hover states
+    - Vertical time slot list with full-width buttons and brand hover effects
+    - Host avatar and tagline displayed on booking pages
+    - "Back to vibes" navigation button with quirky copy
   - Buttons, badges, and highlights updated to reflect palette
   - Tone: playful, approachable, quirky (digitalflower style)
 
@@ -115,16 +122,22 @@ Back-and-forth scheduling wastes time. Calendly set the blueprint for solving th
 - Custom theme picker (palette fixed in Tailwind config)
 
 ## Technical Implementation Details
-- **Framework**: Next.js (App Router) + TypeScript
-- **Styling**: Tailwind CSS + shadcn/ui (extended with custom palette)
-- **Shapes**: Tailwind utilities + CSS clip-path (for thought-bubble)
-- **Hover Effects**: Tailwind opacity + drop-shadow/glow
-- **Socials**: Radix icons or lucide-react
+- **Framework**: Next.js 15 (App Router) + TypeScript
+- **Styling**: Tailwind CSS v4 + shadcn/ui (extended with custom palette via CSS variables)
+- **Shapes**: Organic border-radius + CSS pseudo-elements for thought-bubble dots
+- **Calendar**: Custom CSS overrides for shadcn Calendar component with brand styling
+- **Layout**: CSS Grid + Flexbox for responsive Calendly-style booking pages
+- **Hover Effects**: Tailwind transitions + brand color integration
+- **Socials**: Lucide React icons with accessible labels
 
 ## Success Criteria
-- ✅ Homepage at `/` loads with avatar, name, tagline, and CTA
-- ✅ Event cards display in thought-bubble shapes, animate on hover
+- ✅ Homepage at `/` loads with avatar, name "Brie", tagline, and CTA
+- ✅ Event cards display in organic thought-bubble shapes with colored dots, animate on hover
 - ✅ Clicking event card routes to correct booking flow
 - ✅ Footer visible with correct text + working social links
 - ✅ Palette applied consistently to homepage and booking flow
+- ✅ Booking pages use professional Calendly-style layout with sticky sidebar
+- ✅ Calendar styled with brand colors and clean, modern appearance
+- ✅ Time slots display as vertical list with proper spacing and hover effects
+- ✅ Host avatar and info displayed on booking pages
 - ✅ Overall look/feel references Calendly but with a playful, vibrant twist

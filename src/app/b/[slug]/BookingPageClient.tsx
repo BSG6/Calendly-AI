@@ -2,6 +2,8 @@
 
 import React, { useState } from "react"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
+import Image from "next/image"
 import { BookingHeader } from "@/components/BookingHeader"
 import { DatePickerCard } from "@/components/DatePickerCard"
 import { SlotList } from "@/components/SlotList"
@@ -68,26 +70,103 @@ export function BookingPageClient({ slug, eventMeta }: BookingPageClientProps) {
       {/* Main Content Card */}
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         <div className="bg-white rounded-2xl shadow-md p-8 md:p-12">
-          <BookingHeader
-            title={eventMeta.title}
-            durationMins={eventMeta.durationMins}
-            description={eventMeta.description}
-            timezone={timezone}
-          />
+          {/* Back to Homepage Button */}
+          <div className="mb-6">
+            <Link 
+              href="/" 
+              className="inline-flex items-center text-sm text-muted-foreground hover:text-brand-accent-purple transition-colors underline-offset-4 hover:underline"
+            >
+              ← Back to vibes
+            </Link>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-12">
+            {/* Left Column - Event Details & Host Info */}
+            <div className="lg:col-span-2 space-y-8">
+              {/* Host Avatar & Info */}
+              <div className="flex items-center gap-4">
+                <Image
+                  src="/avatar.png"
+                  alt="Brie"
+                  width={80}
+                  height={80}
+                  className="rounded-full"
+                />
+                <div>
+                  <h2 className="text-xl font-semibold text-brand-primary">Brie</h2>
+                  <p className="text-muted-foreground">Let's make some magic ✨</p>
+                </div>
+              </div>
 
-          <div className="mt-8 grid gap-8 lg:grid-cols-2">
-            {/* Calendar Section */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-medium">Select a Date</h3>
-              <DatePickerCard selectedDate={selectedDate} onChange={setSelectedDate} daysAhead={30} />
+              <BookingHeader
+                title={eventMeta.title}
+                durationMins={eventMeta.durationMins}
+                description={eventMeta.description}
+                timezone={timezone}
+              />
+              
+              {/* Additional Event Info */}
+              <div className="space-y-4 p-6 bg-gray-50 rounded-xl">
+                <h4 className="font-medium text-brand-primary">What to expect:</h4>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg">📅</span>
+                    <span>{eventMeta.durationMins} minute session</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg">🌐</span>
+                    <span>Web conferencing details provided upon confirmation</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg">🕒</span>
+                    <span>Times displayed in {timezone}</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Time Slots Section */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-medium">
-                {selectedDate ? "Available Times" : "Select a date to see available times"}
-              </h3>
-              <SlotList slots={availableSlots} onSelect={handleSlotSelect} loading={false} />
+            {/* Right Sidebar - Calendar & Time Slots */}
+            <div className="lg:col-span-1">
+              <div className="sticky top-8">
+                {/* Unified Calendar & Time Slots Card */}
+                <div className="bg-white border rounded-2xl shadow-lg overflow-hidden">
+                  {/* Calendar Section */}
+                  <div className="p-6 border-b border-gray-100">
+                    <h3 className="text-lg font-semibold text-brand-primary mb-4">Select a Date</h3>
+                    <DatePickerCard selectedDate={selectedDate} onChange={setSelectedDate} daysAhead={30} />
+                  </div>
+
+                  {/* Time Slots Section */}
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-lg font-semibold text-brand-primary">
+                        {selectedDate ? "Available Times" : "Pick a date first"}
+                      </h3>
+                      {selectedDate && (
+                        <span className="text-sm text-muted-foreground">
+                          {selectedDate.toLocaleDateString('en-US', { 
+                            weekday: 'short', 
+                            month: 'short', 
+                            day: 'numeric' 
+                          })}
+                        </span>
+                      )}
+                    </div>
+                    
+                    {/* Enhanced Slot List Container */}
+                    <div className="space-y-2 max-h-80 overflow-y-auto">
+                      {selectedDate ? (
+                        <SlotList slots={availableSlots} onSelect={handleSlotSelect} loading={false} />
+                      ) : (
+                        <div className="text-center py-8 text-muted-foreground">
+                          <div className="text-4xl mb-2">📅</div>
+                          <p className="text-sm">Select a date to view available times</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
