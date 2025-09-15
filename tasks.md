@@ -127,37 +127,40 @@
 
 ## 5) Homepage + Branding
 
-5.1 Homepage Layout
-- [ ] Create `src/app/page.tsx`
-- [ ] Hero section: round avatar (`public/avatar.png`), name "Brie (Brittney Spann)", tagline "Grab a slot, let's make some magic"
-- [ ] CTA: “Pick a vibe, not just a time ✨”
-- [ ] Event cards linking to booking flows
-**Acceptance:** Homepage loads with hero, CTA, and event cards
+5.1 Homepage Layout ✅
+- [x] Create `src/app/page.tsx`
+- [x] Hero section: round avatar (`public/avatar.png`), name "Brie (Brittney Spann)", tagline "Grab a slot, let's make some magic"
+- [x] CTA: "Pick a vibe, not just a time ✨"
+- [x] Event cards linking to booking flows
+**Acceptance:** ✅ Homepage loads with hero, CTA, and event cards
 
-5.2 Event Cards Styling
-- [ ] Create custom thought-bubble shapes for event cards
-- [ ] "Let's Bloom" (30 min) → thought-bubble shape; "Coffee Chat" (15 min) → thought-bubble shape
-- [ ] Hover: 50% fade + complementary glow
-- [ ] Duration badge styled in brand colors
-**Acceptance:** Cards animate correctly and look unique
+5.2 Event Cards Styling ✅
+- [x] Create custom thought-bubble shapes for event cards (organic border-radius)
+- [x] "Let's Bloom" (30 min) → thought-bubble shape; "Coffee Chat" (15 min) → thought-bubble shape
+- [x] Hover: Enhanced shadows + micro-scale animation + brand color transitions
+- [x] Duration badge styled in brand colors
+- [x] Elevated card design system: brand background + white content cards
+- [x] Consistent styling pattern across all pages
+**Acceptance:** ✅ Cards animate correctly, look unique, and follow elevated design system
 
-5.3 Quirky Event Text
-- [ ] Rename “Intro Call” → “Let’s Bloom”
-- [ ] Add quirky descriptions on homepage + booking pages
-**Acceptance:** Copy is playful and consistent across pages
+5.3 Quirky Event Text ✅
+- [x] Rename "Intro Call" → "Let's Bloom"
+- [x] Add quirky descriptions on homepage + booking pages
+**Acceptance:** ✅ Copy is playful and consistent across pages
 
-5.4 Footer + Socials
-- [ ] Footer: “Inspired by Calendly, built by me 💜 digitalflower”
-- [ ] Add LinkedIn, Portfolio, TikTok, Bluesky, Email, GitHub icons with hover states
-- [ ] Ensure accessible labels + external links open correctly
-**Acceptance:** Footer visible; socials clickable + accessible
+5.4 Footer + Socials ✅
+- [x] Footer: "Inspired by Calendly, built by me 💜 digitalflower"
+- [x] Add LinkedIn, Portfolio, TikTok, Bluesky, Email, GitHub icons with hover states
+- [x] Ensure accessible labels + external links open correctly
+**Acceptance:** ✅ Footer visible; socials clickable + accessible
 
-5.5 Branding Update
-- [ ] Apply palette to Tailwind config:
+5.5 Branding Update ✅
+- [x] Apply palette to Tailwind config:
   - primary: #4E0250
   - accent-purple: #801A86
   - neutral: #645986
   - accent-green: #8FE388
   - deep-green: #58BC82
-- [ ] Update buttons, badges, headings, hover states across app
-**Acceptance:** Consistent brand feel across homepage + booking flow
+- [x] Update buttons, badges, headings, hover states across app
+**Acceptance:** ✅ Consistent brand feel across homepage + booking flow
+

@@ -86,7 +86,7 @@ export function ConfirmDialog({ open, onOpenChange, slotIso, onConfirm }: Confir
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Confirm Your Booking</DialogTitle>
+          <DialogTitle className="text-brand-primary">Confirm Your Booking</DialogTitle>
           {slotIso && <DialogDescription>{formatSelectedTime(slotIso)}</DialogDescription>}
         </DialogHeader>
 

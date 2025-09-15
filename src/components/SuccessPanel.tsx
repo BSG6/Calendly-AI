@@ -50,10 +50,10 @@ End: ${formatDateTime(end)}`
   return (
     <div className="space-y-6 text-center">
       <div className="space-y-4">
-        <h1 className="text-2xl font-bold sm:text-3xl">You're booked ✨</h1>
+        <h1 className="text-2xl font-bold sm:text-3xl text-brand-primary">You're booked ✨</h1>
 
         <div className="space-y-2">
-          <h2 className="text-lg font-semibold">{title}</h2>
+          <h2 className="text-lg font-semibold text-brand-deep-green">{title}</h2>
           <div className="text-sm text-muted-foreground space-y-1">
             <p>{formatDateTime(start)}</p>
             <p>Duration: {duration}</p>
@@ -75,7 +75,7 @@ End: ${formatDateTime(end)}`
       <div className="pt-4">
         <a
           href="/b/intro-call"
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline"
+          className="text-sm text-muted-foreground hover:text-brand-accent-purple transition-colors underline-offset-4 hover:underline"
         >
           ← Back to booking page
         </a>

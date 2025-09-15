@@ -76,6 +76,13 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  
+  /* Brand Colors */
+  --brand-primary: #4E0250;
+  --brand-accent-purple: #801A86;
+  --brand-neutral: #645986;
+  --brand-accent-green: #8FE388;
+  --brand-deep-green: #58BC82;
 }
 
 .dark {
@@ -120,3 +127,97 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  /* Thought bubble shapes for event cards */
+  .thought-bubble {
+    /* Organic cloud-like border radius for thought bubble effect */
+    border-radius: 50px 60px 40px 70px / 60px 40px 80px 50px;
+    position: relative;
+  }
+  
+  .thought-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 30%;
+    width: 18px;
+    height: 18px;
+    background: inherit;
+    border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .thought-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 25%;
+    width: 10px;
+    height: 10px;
+    background: inherit;
+    border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Specific thought bubble colors */
+  .thought-bubble-purple::before,
+  .thought-bubble-purple::after {
+    background: color-mix(in srgb, #4E0250 8%, white);
+    border-color: color-mix(in srgb, #4E0250 30%, transparent);
+  }
+  
+  .thought-bubble-green::before,
+  .thought-bubble-green::after {
+    background: color-mix(in srgb, #58BC82 8%, white);
+    border-color: color-mix(in srgb, #58BC82 30%, transparent);
+  }
+  
+  /* Brand color glow effects */
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(128, 26, 134, 0.3);
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 20px rgba(143, 227, 136, 0.3);
+  }
+  
+  /* Brand color utilities */
+  .text-brand-primary { color: var(--brand-primary) !important; }
+  .text-brand-accent-purple { color: var(--brand-accent-purple) !important; }
+  .text-brand-deep-green { color: var(--brand-deep-green) !important; }
+  .text-brand-accent-green { color: var(--brand-accent-green) !important; }
+  
+  .bg-brand-primary\/10 { background-color: color-mix(in srgb, var(--brand-primary) 10%, transparent) !important; }
+  .bg-brand-accent-purple\/10 { background-color: color-mix(in srgb, var(--brand-accent-purple) 10%, transparent) !important; }
+  .bg-brand-deep-green\/10 { background-color: color-mix(in srgb, var(--brand-deep-green) 10%, transparent) !important; }
+  .bg-brand-accent-green\/10 { background-color: color-mix(in srgb, var(--brand-accent-green) 10%, transparent) !important; }
+  
+  .border-brand-primary\/20 { border-color: color-mix(in srgb, var(--brand-primary) 20%, transparent) !important; }
+  .border-brand-accent-purple\/20 { border-color: color-mix(in srgb, var(--brand-accent-purple) 20%, transparent) !important; }
+  .border-brand-accent-purple\/50 { border-color: color-mix(in srgb, var(--brand-accent-purple) 50%, transparent) !important; }
+  .border-brand-deep-green\/20 { border-color: color-mix(in srgb, var(--brand-deep-green) 20%, transparent) !important; }
+  .border-brand-accent-green\/20 { border-color: color-mix(in srgb, var(--brand-accent-green) 20%, transparent) !important; }
+  .border-brand-accent-green\/50 { border-color: color-mix(in srgb, var(--brand-accent-green) 50%, transparent) !important; }
+  
+  .group:hover .group-hover\:text-brand-accent-purple { color: var(--brand-accent-purple) !important; }
+  .group:hover .group-hover\:text-brand-accent-green { color: var(--brand-accent-green) !important; }
+  .group:hover .group-hover\:bg-brand-accent-purple\/10 { background-color: color-mix(in srgb, var(--brand-accent-purple) 10%, transparent) !important; }
+  .group:hover .group-hover\:bg-brand-accent-green\/10 { background-color: color-mix(in srgb, var(--brand-accent-green) 10%, transparent) !important; }
+  .group:hover .group-hover\:border-brand-accent-purple\/20 { border-color: color-mix(in srgb, var(--brand-accent-purple) 20%, transparent) !important; }
+  .group:hover .group-hover\:border-brand-accent-green\/20 { border-color: color-mix(in srgb, var(--brand-accent-green) 20%, transparent) !important; }
+  
+  /* Hover utilities for social icons and links */
+  .hover\:text-brand-accent-purple:hover { color: var(--brand-accent-purple) !important; }
+  .hover\:bg-brand-accent-purple\/10:hover { background-color: color-mix(in srgb, var(--brand-accent-purple) 10%, transparent) !important; }
+  .hover\:text-brand-primary:hover { color: var(--brand-primary) !important; }
+  .hover\:text-brand-deep-green:hover { color: var(--brand-deep-green) !important; }
+  
+  /* Background gradient utilities */
+  .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)) !important; }
+  .from-brand-neutral\/10 { --tw-gradient-from: color-mix(in srgb, var(--brand-neutral) 10%, transparent) !important; --tw-gradient-to: transparent !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+  .to-brand-accent-purple\/5 { --tw-gradient-to: color-mix(in srgb, var(--brand-accent-purple) 5%, transparent) !important; }
+}
+

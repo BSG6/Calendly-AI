@@ -1,8 +1,8 @@
 import { BookingPageClient } from "./BookingPageClient"
 
 const EVENTS: Record<string, { title: string; durationMins: number; description: string }> = {
-  "intro-call": { title: "30-min Intro Call", durationMins: 30, description: "Let's connect." },
-  "coffee-chat": { title: "15-min Coffee Chat", durationMins: 15, description: "Quick virtual coffee." },
+  "intro-call": { title: "Let's Bloom", durationMins: 30, description: "A half hour to plant ideas, swap stories, and see what grows 🌱" },
+  "coffee-chat": { title: "Coffee Chat", durationMins: 15, description: "Short, sweet, and caffeinated ☕ — a quick burst of connection" },
 }
 
 export default async function BookingPage({ params }: { params: Promise<{ slug: string }> }) {

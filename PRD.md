@@ -89,13 +89,18 @@ Back-and-forth scheduling wastes time. Calendly set the blueprint for solving th
   - Each card uses a **thought-bubble shape** and links to `/b/[slug]`
   - Hover effect: fade 50% brightness + glow in complementary palette color
 
-- **Branding**:
+- **Branding & Visual Design**:
   - Bright + vibrant palette applied consistently across app:
     - Primary Purple (deep): `#4E0250`
     - Accent Purple (bright): `#801A86`
     - Muted Purple/Gray: `#645986`
     - Accent Green (fresh): `#8FE388`
     - Deep Green (contrast): `#58BC82`
+  - **Elevated Card Design System**:
+    - Main sections: Brand gradient background (`#645986` + `#801A86` at low opacity)
+    - Inner sections: White elevated cards (`bg-white`, `rounded-2xl`, `shadow-md`)
+    - Hover effects: Enhanced shadows (`shadow-xl`) + micro-interactions (`scale-[1.02]`)
+    - Thought-bubble shapes: Organic border-radius for event cards
   - Buttons, badges, and highlights updated to reflect palette
   - Tone: playful, approachable, quirky (digitalflower style)
 

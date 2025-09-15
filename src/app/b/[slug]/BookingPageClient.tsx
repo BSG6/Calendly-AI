@@ -64,28 +64,31 @@ export function BookingPageClient({ slug, eventMeta }: BookingPageClientProps) {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ background: 'linear-gradient(to bottom right, color-mix(in srgb, #645986 10%, transparent), color-mix(in srgb, #801A86 5%, transparent))' }}>
+      {/* Main Content Card */}
       <div className="container mx-auto px-4 py-8 max-w-6xl">
-        <BookingHeader
-          title={eventMeta.title}
-          durationMins={eventMeta.durationMins}
-          description={eventMeta.description}
-          timezone={timezone}
-        />
+        <div className="bg-white rounded-2xl shadow-md p-8 md:p-12">
+          <BookingHeader
+            title={eventMeta.title}
+            durationMins={eventMeta.durationMins}
+            description={eventMeta.description}
+            timezone={timezone}
+          />
 
-        <div className="mt-8 grid gap-8 lg:grid-cols-2">
-          {/* Calendar Section */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-medium">Select a Date</h3>
-            <DatePickerCard selectedDate={selectedDate} onChange={setSelectedDate} daysAhead={30} />
-          </div>
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            {/* Calendar Section */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-medium">Select a Date</h3>
+              <DatePickerCard selectedDate={selectedDate} onChange={setSelectedDate} daysAhead={30} />
+            </div>
 
-          {/* Time Slots Section */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-medium">
-              {selectedDate ? "Available Times" : "Select a date to see available times"}
-            </h3>
-            <SlotList slots={availableSlots} onSelect={handleSlotSelect} loading={false} />
+            {/* Time Slots Section */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-medium">
+                {selectedDate ? "Available Times" : "Select a date to see available times"}
+              </h3>
+              <SlotList slots={availableSlots} onSelect={handleSlotSelect} loading={false} />
+            </div>
           </div>
         </div>
       </div>
