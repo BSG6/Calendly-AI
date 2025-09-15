@@ -44,7 +44,7 @@ export function ConfirmDialog({ open, onOpenChange, slotIso, onConfirm }: Confir
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fieldErrors: Partial<Record<keyof FormData, string>> = {}
-        error.errors.forEach((err) => {
+        error.issues.forEach((err) => {
           if (err.path[0]) {
             fieldErrors[err.path[0] as keyof FormData] = err.message
           }

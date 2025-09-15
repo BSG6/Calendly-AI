@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 
@@ -42,7 +43,7 @@ End: ${formatDateTime(end)}`
     try {
       await navigator.clipboard.writeText(details)
       toast.success("Booking details copied to clipboard!")
-    } catch (error) {
+    } catch {
       toast.error("Failed to copy details")
     }
   }
@@ -50,7 +51,7 @@ End: ${formatDateTime(end)}`
   return (
     <div className="space-y-6 text-center">
       <div className="space-y-4">
-        <h1 className="text-2xl font-bold sm:text-3xl text-brand-primary">You're booked ✨</h1>
+        <h1 className="text-2xl font-bold sm:text-3xl text-brand-primary">You&apos;re booked ✨</h1>
 
         <div className="space-y-2">
           <h2 className="text-lg font-semibold text-brand-deep-green">{title}</h2>
@@ -73,12 +74,12 @@ End: ${formatDateTime(end)}`
       </div>
 
       <div className="pt-4">
-        <a
+        <Link
           href="/b/intro-call"
           className="text-sm text-muted-foreground hover:text-brand-accent-purple transition-colors underline-offset-4 hover:underline"
         >
           ← Back to booking page
-        </a>
+        </Link>
       </div>
     </div>
   )

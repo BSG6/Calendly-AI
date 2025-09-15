@@ -16,11 +16,10 @@ interface EventMeta {
 }
 
 interface BookingPageClientProps {
-  slug: string
   eventMeta: EventMeta
 }
 
-export function BookingPageClient({ slug, eventMeta }: BookingPageClientProps) {
+export function BookingPageClient({ eventMeta }: BookingPageClientProps) {
   const router = useRouter()
   const [selectedDate, setSelectedDate] = useState<Date>()
   const [selectedSlot, setSelectedSlot] = useState<string>()
@@ -46,7 +45,7 @@ export function BookingPageClient({ slug, eventMeta }: BookingPageClientProps) {
     setDialogOpen(true)
   }
 
-  const handleConfirm = async (_data: { name: string; email: string }) => {
+  const handleConfirm = async () => {
     if (!selectedSlot) return
 
     // Simulate API call
@@ -94,7 +93,7 @@ export function BookingPageClient({ slug, eventMeta }: BookingPageClientProps) {
                 />
                 <div>
                   <h2 className="text-xl font-semibold text-brand-primary">Brie</h2>
-                  <p className="text-muted-foreground">Let's make some magic ✨</p>
+                  <p className="text-muted-foreground">Let&apos;s make some magic ✨</p>
                 </div>
               </div>
 

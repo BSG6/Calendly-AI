@@ -69,7 +69,7 @@ export async function GET(request: NextRequest) {
         "Cache-Control": "no-cache",
       },
     })
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to generate calendar file" }, { status: 500 })
   }
 }
