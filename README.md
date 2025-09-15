@@ -23,7 +23,6 @@ MagicMeet is a lightweight scheduling app: share a link → pick a time → conf
 - **Styling:** Tailwind CSS + shadcn/ui  
 - **Forms:** React Hook Form + Zod  
 - **Calendar:** react-day-picker + date-fns  
-- **AI-Assisted Development:** Cursor, V0.dev, ChatGPT  
 
 ## ▶️ Getting Started  
 ```bash
