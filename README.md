@@ -8,7 +8,6 @@
 
 ## 📖 Overview  
 MagicMeet is a lightweight scheduling app: share a link → pick a time → confirm → add to your calendar.  
-Built to be **accessible, mobile-first, and standards-compliant**.  
 
 ## 🚀 Features  
 - 📅 Two event types: **Intro Call (30 min)** & **Coffee Chat (15 min)**  
